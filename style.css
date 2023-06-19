@@ -45,7 +45,6 @@ body {
   border-radius: 25px;
   overflow: hidden;
   padding: 30px 50px 0px 50px;
-  box-shadow: var(--shadow);
 }
 
 .calendar {
@@ -77,7 +76,7 @@ body {
 .calendar-week-days div:hover {
   color: black;
   transform: scale(1.2);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2 ease-in-out;
 }
 
 .calendar-week-days div {
@@ -89,7 +88,7 @@ body {
 
 .calendar-days {
   display: grid;
-  grid-template-columns: repeat (7, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 2px;
   color: var(--color-txt);
 }
@@ -155,10 +154,10 @@ body {
 #year:hover {
   cursor: pointer;
   transform: scale(1.2);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2 ease-in-out;
 }
 
-.calendar-days div:hover {
+.calendar-days div span {
   position: absolute;
 }
 
@@ -234,7 +233,7 @@ body {
   justify-content: center;
 }
 
-.date-text-formate {
+.day-text-formate {
   font-family: Microsoft JhengHei UI;
   font-size: 1.4rem;
   padding-right: 5%;
@@ -267,19 +266,19 @@ body {
   animation: hidetime 1.5s forwards;
 }
 .day-text-formate.showtime {
-  animation: showtime 1.5s forwards;
+  animation: showtime 1s forwards;
 }
 
 .time-formate.showtime {
-  animation: showtime 1.5s forwards;
+  animation: showtime 1s forwards;
 }
 .date-formate.showtime {
-  animation: showtime 1.5s forwards;
+  animation: showtime 1s forwards;
 }
 
 @keyframes to-top {
   0% {
-    transform: translateY(0%);
+    transform: translateY(0);
     opacity: 0;
   }
   100% {
@@ -289,42 +288,42 @@ body {
 }
 @keyframes to-left {
   0% {
-    transform: translateX(230%);
+    transform: translatex(230%);
     opacity: 1;
   }
   100% {
-    transform: translateX(230%);
+    transform: translatex(0);
     opacity: 1;
   }
 }
 @keyframes to-right {
   10% {
-    transform: translateX(0%);
+    transform: translatex(0%);
     opacity: 1;
   }
   100% {
-    transform: translateX(-150%);
+    transform: translatex(-150%);
     opacity: 1;
   }
 }
 @keyframes showtime {
   0% {
-    transform: translateX(250%);
+    transform: translatex(250%);
     opacity: 1;
   }
   100% {
-    transform: translateX(0%);
+    transform: translatex(0%);
     opacity: 1;
   }
 }
 
 @keyframes hidetime {
   0% {
-    transform: translateX(0%);
+    transform: translatex(0%);
     opacity: 1;
   }
   100% {
-    transform: translateX(-370%);
+    transform: translatex(-370%);
     opacity: 1;
   }
 }
