@@ -148,3 +148,39 @@ setInterval(() => {
   )}: ${`${timer.getSeconds()}`.padStart(2, "0")}`;
   todayShowTime.textContent = formateTimer;
 }, 1000);
+
+let year_picker = document.querySelector("#year-picker");
+
+year_picker.onclick = () => {
+
+  let year_list = [
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026",
+    "2027",
+    "2028",
+    "2029",
+    "2030",
+  ];
+  month_list.innerHTML=""
+  year_list.forEach((e) => {
+    let year_div = document.createElement("div");
+    year_div.innerHTML= `<div>${e}</div>`
+    // console.log(year_div);
+    month_list.append(year_div);
+  });
+  month_list.classList.remove("hideonce");
+  month_list.classList.remove("hide");
+  month_list.classList.add("show");
+  dayTextFormate.classList.remove("showtime");
+  dayTextFormate.classList.add("hidetime");
+  timeFormate.classList.remove("showtime");
+  timeFormate.classList.add("hideTime");
+  dateFormate.classList.remove("showtime");
+  dateFormate.classList.add("hideTime");
+};
